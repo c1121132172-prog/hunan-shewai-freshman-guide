@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="湖南涉外经济学院2026新生完整攻略 - 报到流程、校园生活、宿舍攻略、专业课表、学长学姐帮助">
+  <title>湖南涉外经济学院 · 2026新生攻略</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Condiment&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FF7AA9' d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'/%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- 动态背景 -->
+  <div class="bg-deco">
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+    <div class="bg-blob blob-4"></div>
+  </div>
+  <div class="particles" id="particles"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- 导航栏 -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+        <span>涉外攻略</span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">首页</a></li>
+        <li><a href="#mentors">学长学姐</a></li>
+        <li><a href="#guide-catalog">攻略目录</a></li>
+        <li><a href="#buildings">校园建筑</a></li>
+        <li><a href="#dorms">宿舍</a></li>
+        <li><a href="#courses">课表</a></li>
+        <li><a href="#faq">问答</a></li>
+        <li><a href="#join">加群</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section id="hero" class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge"><span class="dot"></span>HIEU 2026 新生专属</div>
+      <h1 class="hero-title">湖南涉外经济学院<br><span class="hero-title-line" id="heroTitleLine">2026新生完整攻略</span></h1>
+      <p class="hero-en">WELCOME TO 涉外新生攻略</p>
+      <p class="hero-motto">至善至美 · 自立自强</p>
+      <div class="hero-stats" id="heroStats"></div>
+      <div class="hero-btns">
+        <a href="#guide-catalog" class="btn-primary magnetic">查看攻略目录</a>
+        <a href="#join" class="btn-outline magnetic">加入新生群</a>
+      </div>
+    </div>
+    <div class="hero-float" id="heroFloat"></div>
+    <div class="hero-scroll">
+      <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+    </div>
+  </section>
+
+  <!-- ===== 学长学姐帮助 ===== -->
+  <section id="mentors" class="section">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <span class="sec-tag">MENTORS</span>
+        <h2 class="sec-title">学长学姐帮助</h2>
+        <p class="sec-desc">有问题随时联系 · 学长学姐在线解答 · 点击抖音/小红书可跳转</p>
+      </div>
+      <div class="mentor-grid" id="mentorGrid"></div>
+      <div class="mentor-more-wrap">
+        <button class="mentor-more-btn magnetic" id="mentorMoreBtn">
+          查看更多学长学姐联系方式
+          <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 攻略目录（交互式手风琴） ===== -->
+  <section id="guide-catalog" class="section section-alt">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <span class="sec-tag">CATALOG</span>
+        <h2 class="sec-title">攻略目录</h2>
+        <p class="sec-desc">7大板块覆盖报到、生活、宿舍、规则、避坑等新生最关心的事 — 点击卡片展开探索</p>
+      </div>
+      <div class="guide-progress fade-in" id="guideProgress">
+        <div class="guide-progress-track">
+          <div class="guide-progress-fill" id="guideProgressFill"></div>
+        </div>
+        <span class="guide-progress-text" id="guideProgressText">0 / 7 板块已探索</span>
+      </div>
+      <div class="guide-accordion fade-in" id="guideAccordion"></div>
+    </div>
+  </section>
+
+  <!-- ===== 学校概况 ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <span class="sec-tag">ABOUT HIEU</span>
+        <h2 class="sec-title">学校概况</h2>
+        <p class="sec-desc">坐落于星城梅溪之畔 三万师生筑梦的学府</p>
+      </div>
+      <p class="about-text fade-in">
+        湖南涉外经济学院是一所经国家教育部批准成立的民办普通本科院校，始建于1997年，2005年升格为本科院校。学校坐落于湖南省长沙市岳麓区，校园占地面积79.01万平方米，涵盖经济学、法学、教育学、文学、工学、管理学、艺术学等7个学科门类，设有8个二级学院，开设48个本科专业。
+      </p>
+      <div class="stats-grid">
+        <div class="stat-card fade-in"><div class="stat-num" data-count="790100" data-suffix="㎡">0</div><div class="stat-label">校园占地面积</div></div>
+        <div class="stat-card fade-in"><div class="stat-num" data-count="31263" data-suffix="人">0</div><div class="stat-label">在校学生</div></div>
+        <div class="stat-card fade-in"><div class="stat-num" data-count="1229" data-suffix="人">0</div><div class="stat-label">专任教师</div></div>
+        <div class="stat-card fade-in"><div class="stat-num" data-count="48" data-suffix="个">0</div><div class="stat-label">本科专业</div></div>
+        <div class="stat-card fade-in"><div class="stat-num" data-count="289" data-suffix="万册">0</div><div class="stat-label">图书馆藏书</div></div>
+        <div class="stat-card fade-in"><div class="stat-num" data-count="563" data-suffix="间">0</div><div class="stat-label">实验实训室</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 校园建筑 ===== -->
+  <section id="buildings" class="section section-alt">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <span class="sec-tag">CAMPUS MAP</span>
+        <h2 class="sec-title">校园建筑导览</h2>
+        <p class="sec-desc">涉外每一栋楼的用途和位置 帮你快速熟悉校园</p>
+      </div>
+      <div class="building-search fade-in">
+        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        <input type="text" id="buildingSearch" placeholder="搜索建筑名称、功能或位置...">
+      </div>
+      <div class="filter-row fade-in" id="filterRow"></div>
+      <div class="buildings-grid" id="buildingsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== 宿舍攻略 ===== -->
+  <section id="dorms" class="section">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <span class="sec-tag">DORMITORY</span>
+        <h2 class="sec-title">宿舍攻略</h2>
+        <p class="sec-desc">四人间 & 六人间 空调独卫 上床下桌</p>
+      </div>
+      <div class="dorm-compare fade-in" id="dormCompare"></div>
+      <div class="canteen-wrap fade-in">
+        <h3 class="sub-title">食堂美食 <span class="accent">canteen</span></h3>
+        <p class="sub-desc">7个食堂 各地美食 平均消费约30元/天</p>
+        <div class="canteen-grid" id="canteenGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 专业课表 ===== -->
+  <section id="courses" class="section section-alt">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <span class="sec-tag">COURSE</span>
+        <h2 class="sec-title">专业课表查询</h2>
+        <p class="sec-desc">选择你的学院和专业 查看大一课程安排</p>
+      </div>
+      <div class="course-area">
+        <div class="college-grid" id="collegeGrid"></div>
+        <div class="major-selector" id="majorSelector"></div>
+      </div>
+      <div class="course-display" id="courseDisplay"></div>
+    </div>
+  </section>
+
+  <!-- ===== 新生问答 ===== -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <span class="sec-tag">FAQ</span>
+        <h2 class="sec-title">新生问答</h2>
+        <p class="sec-desc">你想知道的 这里都有答案</p>
+      </div>
+      <div class="faq-list" id="faqList"></div>
+    </div>
+  </section>
+
+  <!-- ===== 加入新生群 ===== -->
+  <section id="join" class="section section-alt">
+    <div class="container">
+      <div class="sec-head fade-in">
+        <span class="sec-tag">JOIN US</span>
+        <h2 class="sec-title">加入新生群</h2>
+        <p class="sec-desc">扫码加入湖南涉外经济学院新生答疑群</p>
+      </div>
+      <div class="join-area fade-in">
+        <div class="qr-row" id="qrRow"></div>
+        <div class="contact-cards" id="contactCards"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 返回顶部 -->
+  <button class="back-top" id="backTop" aria-label="返回顶部">
+    <svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+  </button>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-col-wide">
+        <div class="footer-logo">
+          <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+          <span>涉外攻略</span>
+        </div>
+        <p>本网站为个人开发的非官方新生指南，旨在帮助新生快速了解湖南涉外经济学院校园环境、宿舍条件及课程安排。</p>
+      </div>
+      <div class="footer-col">
+        <h4>快速导航</h4>
+        <ul>
+          <li><a href="#mentors">学长学姐</a></li>
+          <li><a href="#guide-catalog">攻略目录</a></li>
+          <li><a href="#buildings">校园建筑</a></li>
+          <li><a href="#courses">专业课表</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>学校联系方式</h4>
+        <ul>
+          <li>地址：长沙市岳麓区枫林三路822号</li>
+          <li>邮编：410205</li>
+          <li>招生咨询：0731-88100988</li>
+          <li>官网：www.hieu.edu.cn</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>实用链接</h4>
+        <ul>
+          <li><a href="http://www.hieu.edu.cn" target="_blank" rel="noopener">学校官网</a></li>
+          <li><a href="http://zs.hieu.edu.cn" target="_blank" rel="noopener">招生网</a></li>
+          <li><a href="http://jwc.hieu.edu.cn" target="_blank" rel="noopener">教务处</a></li>
+          <li><a href="http://lib.hieu.edu.cn" target="_blank" rel="noopener">图书馆</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 涉外新生攻略 · 个人博客网站 · 仅供新生参考</p>
+      <p class="footer-disclaimer">本网站内容基于公开信息整理，如有变动请以学校官方公布为准</p>
+    </div>
+  </footer>
+
+  <!-- 欢迎弹窗 -->
+  <div class="welcome-overlay" id="welcomeOverlay">
+    <div class="welcome-modal">
+      <button class="welcome-close" id="welcomeClose" aria-label="关闭">&times;</button>
+      <div class="welcome-head">
+        <div class="welcome-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 2.83L19.17 9 12 12.83 4.83 9 12 5.83zM17 19H7v-2h10v2z"/></svg>
+        </div>
+        <h2>欢迎来到涉外</h2>
+        <p class="welcome-sub">2026级新生专属交流平台</p>
+      </div>
+      <div class="welcome-body" id="welcomeBody"></div>
+      <button class="welcome-btn magnetic" id="welcomeBtn">我知道了 开始探索</button>
+    </div>
+  </div>
+
+  <!-- 复制提示 -->
+  <div class="toast" id="toast">微信号已复制到剪贴板</div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
